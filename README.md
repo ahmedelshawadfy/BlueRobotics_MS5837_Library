@@ -8,6 +8,16 @@ This library also supports the MS5837-02BA which has a much smaller measurement 
 
 Please see the examples for normal operation. Below are the available functions used in the library.
 
+## ESP32 Support
+
+This library is fully compatible with ESP32 boards. The library is tested with ESP32 in the CI/CD pipeline. See the `MS5837_ESP32_Example` for ESP32-specific usage.
+
+**ESP32 Default I2C Pins:**
+- SDA: GPIO 21
+- SCL: GPIO 22
+
+You can customize the I2C pins by calling `Wire.begin(SDA_PIN, SCL_PIN)` before initializing the sensor.
+
 ``` cpp
 MS5837();
 
