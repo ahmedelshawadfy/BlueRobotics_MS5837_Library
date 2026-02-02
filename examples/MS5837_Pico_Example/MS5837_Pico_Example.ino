@@ -104,6 +104,8 @@ void setup() {
   Serial.println("MS5837 sensor initialized successfully!");
   
   // Print detected sensor model
+  // getModel() returns the sensor type that was auto-detected during init() based on
+  // the sensor's calibration data. This can be MS5837_30BA, MS5837_02BA, or MS5837_UNRECOGNISED
   uint8_t model = sensor.getModel();
   Serial.print("Detected sensor model: ");
   if (model == MS5837::MS5837_30BA) {

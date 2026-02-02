@@ -33,9 +33,10 @@ The Raspberry Pi Pico has two I2C controllers:
 - Used with `Wire` object
 
 #### I2C1 (Alternative)
-- **SDA**: GP2 (Pin 4) or GP6, GP10, GP14, GP18, GP26
-- **SCL**: GP3 (Pin 5) or GP7, GP11, GP15, GP19, GP27
+- **SDA**: GP2 (Pin 4), GP6, GP10, GP14, GP18, or GP26 (choose one)
+- **SCL**: GP3 (Pin 5), GP7, GP11, GP15, GP19, or GP27 (choose one)
 - Used with `Wire1` object
+- Note: Only one SDA and one SCL pin can be active at a time per I2C controller
 
 ### Voltage Compatibility
 
