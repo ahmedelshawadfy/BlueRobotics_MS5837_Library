@@ -27,4 +27,6 @@ jobs:
         python -m pip install --upgrade pip
         pip install --upgrade platformio
     - name: Run PlatformIO
-      run: platformio ci --lib="." --board=uno --board=megaatmega2560 examples/MS5837_Example/*.ino
+      run: |
+        platformio ci --lib="." --board=uno --board=megaatmega2560 examples/MS5837_Example/*.ino
+        platformio ci --lib="." --board=pico examples/MS5837_Pico_Example/*.ino
