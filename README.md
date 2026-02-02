@@ -4,9 +4,41 @@ Arduino library for the MS5837 pressure sensor. The MS5837 is a tiny SMT pressur
 
 This library also supports the MS5837-02BA which has a much smaller measurement range and is better suited for altitude measurement in air.
 
+## Platform Compatibility
+
+This library is compatible with a wide range of Arduino-compatible platforms, including:
+
+- **Arduino boards**: Uno, Mega, Nano, etc.
+- **Raspberry Pi Pico W/W2**: Fully compatible using the [arduino-pico core](https://github.com/earlephilhower/arduino-pico)
+- **ESP32/ESP8266**: Compatible with all variants
+- **STM32**: Compatible with STM32duino
+- **Any platform with Arduino Wire library support**
+
+### Raspberry Pi Pico W/W2 Setup
+
+The library works seamlessly with Raspberry Pi Pico W and Pico W2. To use it:
+
+1. **Install Board Support**: Add the arduino-pico core to your Arduino IDE
+   - Add `https://github.com/earlephilhower/arduino-pico/releases/download/global/package_rp2040_index.json` to Board Manager URLs
+   - Install "Raspberry Pi Pico/RP2040" from Board Manager
+
+2. **Wiring**: Connect the MS5837 sensor to Pico's I2C pins:
+   - SDA → GP4 (default I2C0) or GP2 (I2C1)
+   - SCL → GP5 (default I2C0) or GP3 (I2C1)
+   - VCC → 3.3V
+   - GND → GND
+
+3. **Example**: See `examples/MS5837_Pico_Example` for a complete Pico-specific example with detailed setup instructions.
+
 # Documentation
 
 Please see the examples for normal operation. Below are the available functions used in the library.
+
+**Examples:**
+- `MS5837_Example` - Basic example for Arduino boards
+- `MS5837_Pico_Example` - Raspberry Pi Pico W/W2 specific example with detailed setup
+
+## API Reference
 
 ``` cpp
 MS5837();
