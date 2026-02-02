@@ -1,0 +1,30 @@
+# PlatformIO Configuration for Testing MS5837 Library
+# This file demonstrates how to use the MS5837 library with Raspberry Pi Pico W/W2
+# 
+# To use this file:
+# 1. Copy this file to your PlatformIO project root
+# 2. Run: platformio run -e pico
+# 3. Upload: platformio run -e pico --target upload
+#
+# For more information about PlatformIO and Raspberry Pi Pico:
+# https://docs.platformio.org/en/latest/boards/raspberrypi/pico.html
+
+[platformio]
+src_dir = examples/MS5837_Pico_Example
+
+[env:pico]
+platform = raspberrypi
+board = pico
+framework = arduino
+lib_deps = 
+    Wire
+
+[env:picow]
+platform = raspberrypi
+board = picow
+framework = arduino
+lib_deps = 
+    Wire
+
+# For Raspberry Pi Pico W2 (when available in PlatformIO)
+# Use the picow environment as Pico W2 is software-compatible with Pico W
